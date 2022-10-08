@@ -1,0 +1,149 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.0.22-community-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema college_db
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ college_db;
+USE college_db;
+
+--
+-- Table structure for table `college_db`.`marksdetails`
+--
+
+DROP TABLE IF EXISTS `marksdetails`;
+CREATE TABLE `marksdetails` (
+  `stud_id` varchar(45) NOT NULL default '',
+  `stud_name` varchar(45) NOT NULL default '',
+  `semester` varchar(45) NOT NULL default '',
+  `subject` varchar(45) NOT NULL default '',
+  `exam_date` varchar(45) NOT NULL default '',
+  `marks` varchar(45) NOT NULL default '',
+  `exam_type` varchar(45) NOT NULL default '',
+  PRIMARY KEY  (`stud_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `college_db`.`marksdetails`
+--
+
+/*!40000 ALTER TABLE `marksdetails` DISABLE KEYS */;
+INSERT INTO `marksdetails` (`stud_id`,`stud_name`,`semester`,`subject`,`exam_date`,`marks`,`exam_type`) VALUES 
+ ('12','Aarohi','2','Java','10/6/2021','70/80','Theory Internal'),
+ ('2','shree','3','PD','10/6/2021','70/80','Theory Internal'),
+ ('4','omkar','1','PD','10/6/2021','70/80','Theory Internal');
+/*!40000 ALTER TABLE `marksdetails` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `college_db`.`staffregisterinfo`
+--
+
+DROP TABLE IF EXISTS `staffregisterinfo`;
+CREATE TABLE `staffregisterinfo` (
+  `employee_id` varchar(10) NOT NULL default '',
+  `name` varchar(45) NOT NULL default '',
+  `mobile_number` varchar(45) NOT NULL default '',
+  `email_id` varchar(45) NOT NULL default '',
+  `user_name` varchar(45) NOT NULL default '',
+  `password` varchar(45) NOT NULL default '',
+  PRIMARY KEY  (`user_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `college_db`.`staffregisterinfo`
+--
+
+/*!40000 ALTER TABLE `staffregisterinfo` DISABLE KEYS */;
+INSERT INTO `staffregisterinfo` (`employee_id`,`name`,`mobile_number`,`email_id`,`user_name`,`password`) VALUES 
+ ('11','sanu','9658412536','sanu12@gmail.com','sanu','123'),
+ ('1212','vishakha','9658451256','vish12@gmail.com','vish','123'),
+ ('12','vrushali','9658412578','vrush12@gmail.com','vrush','123');
+/*!40000 ALTER TABLE `staffregisterinfo` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `college_db`.`studentdetails`
+--
+
+DROP TABLE IF EXISTS `studentdetails`;
+CREATE TABLE `studentdetails` (
+  `stud_id` varchar(10) NOT NULL default '',
+  `stud_name` varchar(45) NOT NULL default '',
+  `semester` varchar(45) NOT NULL default '',
+  `department` varchar(45) NOT NULL default '',
+  `subject` varchar(45) NOT NULL default '',
+  `dob` varchar(45) NOT NULL default '',
+  `gender` varchar(45) NOT NULL default '',
+  `email_id` varchar(45) NOT NULL default '',
+  `mobile_number` varchar(45) NOT NULL default '',
+  `parent_name` varchar(45) NOT NULL default '',
+  `relation` varchar(45) NOT NULL default '',
+  `per_address` varchar(45) NOT NULL default '',
+  `curt_address` varchar(45) NOT NULL default '',
+  `parent_mobile` varchar(45) NOT NULL default '',
+  PRIMARY KEY  (`stud_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `college_db`.`studentdetails`
+--
+
+/*!40000 ALTER TABLE `studentdetails` DISABLE KEYS */;
+INSERT INTO `studentdetails` (`stud_id`,`stud_name`,`semester`,`department`,`subject`,`dob`,`gender`,`email_id`,`mobile_number`,`parent_name`,`relation`,`per_address`,`curt_address`,`parent_mobile`) VALUES 
+ ('1','swapnil','IT','1','java\nSE','15/02/1987','Other','9854756214','swp12@gmail.com','Santosh','Father','Pune','Pune','9854125632'),
+ ('12','Aarohi','IT','2','\njava\nBDA\nSE\nPD','12/05/1998','Other','9658451256','aaru@gmail.com','Aarti','Mother','Indapur','Pune','9654125785'),
+ ('2','shree','Machanical','3','\njava\nBDA\nSE\nPD','13/09/1998','Male','9658412536','shree121@gmail.com','harshar','Guardian','Pune','Pune','9954882355');
+/*!40000 ALTER TABLE `studentdetails` ENABLE KEYS */;
+
+
+--
+-- Table structure for table `college_db`.`studentregisterinfo`
+--
+
+DROP TABLE IF EXISTS `studentregisterinfo`;
+CREATE TABLE `studentregisterinfo` (
+  `stud_id` varchar(10) NOT NULL default '',
+  `stud_name` varchar(45) NOT NULL default '',
+  `department` varchar(45) NOT NULL default '',
+  `semester` varchar(45) NOT NULL default '',
+  `mobile_number` varchar(45) NOT NULL default '',
+  `email_id` varchar(45) NOT NULL default '',
+  `password` varchar(45) NOT NULL default '',
+  PRIMARY KEY  (`stud_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `college_db`.`studentregisterinfo`
+--
+
+/*!40000 ALTER TABLE `studentregisterinfo` DISABLE KEYS */;
+INSERT INTO `studentregisterinfo` (`stud_id`,`stud_name`,`department`,`semester`,`mobile_number`,`email_id`,`password`) VALUES 
+ ('1','swapnil','IT','1','9854756214','swp12@gmail.com','123'),
+ ('12','Aarohi','IT','2','9658451256','aaru@gmail.com','123'),
+ ('2','shree','Machanical','3','9658412536','shree121@gmail.com','123'),
+ ('3','taniya','Computer Science','2','8542578965','tanu@gmail.com','123'),
+ ('4','omkar','Civil','1','8877456932','omi123@gmail.com','123');
+/*!40000 ALTER TABLE `studentregisterinfo` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
