@@ -174,9 +174,9 @@ public class LogInFrame extends javax.swing.JFrame {
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(103, 103, 103)
                         .addComponent(jButton2)
-                        .addGap(143, 143, 143)
+                        .addGap(112, 112, 112)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(129, 129, 129))
+                        .addGap(160, 160, 160))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26))
@@ -226,7 +226,7 @@ public class LogInFrame extends javax.swing.JFrame {
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/collegedatabasemanagementsystem/rdtcFinal.jpg"))); // NOI18N
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(0, 0, 1360, 770);
+        jLabel6.setBounds(0, 2, 1360, 768);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
